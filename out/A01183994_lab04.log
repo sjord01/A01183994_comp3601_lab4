@@ -1,0 +1,39 @@
+2024-10-20 19:13:05,640 main DEBUG database.Database (Database.java:30) - Loading database properties from db.properties
+2024-10-20 19:13:05,988 main DEBUG dao.Dao (Dao.java:30) - CREATE TABLE A01183994_Customers (id VARCHAR(20), phone VARCHAR(20), firstName VARCHAR(50), lastName VARCHAR(50), streetName VARCHAR(100), city VARCHAR(50), postalCode VARCHAR(10), email VARCHAR(100), joinDate DATE, PRIMARY KEY (id))
+2024-10-20 19:13:06,002 main INFO  dao.CustomerDao (CustomerDao.java:82) - Table A01183994_Customers created successfully.
+2024-10-20 19:13:06,011 main DEBUG dao.Dao (Dao.java:40) - INSERT INTO A01183994_Customers VALUES ('1', '6044335004', 'Fred', 'Fish', '5707 Sidley St', 'Burnaby', 'V5J5E6', 'fredfish@imperial.net', '2008-03-22')
+2024-10-20 19:13:06,094 main DEBUG dao.Dao (Dao.java:40) - INSERT INTO A01183994_Customers VALUES ('2', '6048760182', 'Laurie', 'Nash', '2816 Commercial Dr', 'Vancouver', 'V5N4C6', 'laurieeenash@modern.com', '2014-08-28')
+2024-10-20 19:13:06,167 main DEBUG dao.Dao (Dao.java:40) - INSERT INTO A01183994_Customers VALUES ('3', '6045884988', 'Conrad', 'Washington', '13479 King George Blvd', 'Surrey', 'V3T2T8', 'cwash@daytona.net', '2011-07-12')
+2024-10-20 19:13:06,250 main DEBUG dao.Dao (Dao.java:40) - INSERT INTO A01183994_Customers VALUES ('4', '6042762552', 'Jeanette', 'Price', '21000 Westminster Hwy', 'Richmond', 'V6V2S9', 'priceizrite@pacific.com', '2015-10-03')
+2024-10-20 19:13:06,319 main DEBUG dao.Dao (Dao.java:40) - INSERT INTO A01183994_Customers VALUES ('5', '6042931022', 'Mark', 'Chan', '3766 E 1st Ave', 'Burnaby', 'V5C3V9', 'mchan@hcenter.com', '2010-04-01')
+2024-10-20 19:13:06,329 main INFO  a01183994.Lab4 (Lab4.java:148) - Customers added successfully from file.
+2024-10-20 19:13:07,272 main INFO  dao.CustomerDao (CustomerDao.java:173) - Cleaning up CustomerDao resources.
+2024-10-20 19:13:07,343 main DEBUG dao.CustomerDao (CustomerDao.java:177) - DROP TABLE IF EXISTS A01183994_Customers
+2024-10-20 19:13:07,365 main INFO  dao.CustomerDao (CustomerDao.java:179) - Table A01183994_Customers dropped successfully.
+2024-10-20 19:13:07,365 main INFO  a01183994.Lab4 (Lab4.java:108) - Lab4 execution completed.
+2024-10-20 19:13:42,710 main DEBUG database.Database (Database.java:30) - Loading database properties from db.properties
+2024-10-20 19:13:43,083 main DEBUG dao.Dao (Dao.java:30) - CREATE TABLE A01183994_Customers (id VARCHAR(20), phone VARCHAR(20), firstName VARCHAR(50), lastName VARCHAR(50), streetName VARCHAR(100), city VARCHAR(50), postalCode VARCHAR(10), email VARCHAR(100), joinDate DATE, PRIMARY KEY (id))
+2024-10-20 19:13:43,095 main INFO  dao.CustomerDao (CustomerDao.java:82) - Table A01183994_Customers created successfully.
+2024-10-20 19:13:43,102 main DEBUG dao.Dao (Dao.java:40) - INSERT INTO A01183994_Customers VALUES ('1', '6044335004', 'Fred', 'Fish', '5707 Sidley St', 'Burnaby', 'V5J5E6', 'fredfish@imperial.net', '2008-03-22')
+2024-10-20 19:13:43,179 main DEBUG dao.Dao (Dao.java:40) - INSERT INTO A01183994_Customers VALUES ('2', '6048760182', 'Laurie', 'Nash', '2816 Commercial Dr', 'Vancouver', 'V5N4C6', 'laurieeenash@modern.com', '2014-08-28')
+2024-10-20 19:13:43,247 main DEBUG dao.Dao (Dao.java:40) - INSERT INTO A01183994_Customers VALUES ('3', '6045884988', 'Conrad', 'Washington', '13479 King George Blvd', 'Surrey', 'V3T2T8', 'cwash@daytona.net', '2011-07-12')
+2024-10-20 19:13:43,315 main DEBUG dao.Dao (Dao.java:40) - INSERT INTO A01183994_Customers VALUES ('4', '6042762552', 'Jeanette', 'Price', '21000 Westminster Hwy', 'Richmond', 'V6V2S9', 'priceizrite@pacific.com', '2015-10-03')
+2024-10-20 19:13:43,387 main DEBUG dao.Dao (Dao.java:40) - INSERT INTO A01183994_Customers VALUES ('5', '6042931022', 'Mark', 'Chan', '3766 E 1st Ave', 'Burnaby', 'V5C3V9', 'mchan@hcenter.com', '2010-04-01')
+2024-10-20 19:13:43,397 main INFO  a01183994.Lab4 (Lab4.java:148) - Customers added successfully from file.
+2024-10-20 19:13:43,884 main INFO  dao.CustomerDao (CustomerDao.java:173) - Cleaning up CustomerDao resources.
+2024-10-20 19:13:43,978 main DEBUG dao.CustomerDao (CustomerDao.java:177) - DROP TABLE IF EXISTS A01183994_Customers
+2024-10-20 19:13:43,993 main INFO  dao.CustomerDao (CustomerDao.java:179) - Table A01183994_Customers dropped successfully.
+2024-10-20 19:13:43,993 main INFO  a01183994.Lab4 (Lab4.java:108) - Lab4 execution completed.
+2024-10-20 19:13:59,568 main DEBUG database.Database (Database.java:30) - Loading database properties from db.properties
+2024-10-20 19:13:59,885 main DEBUG dao.Dao (Dao.java:30) - CREATE TABLE A01183994_Customers (id VARCHAR(20), phone VARCHAR(20), firstName VARCHAR(50), lastName VARCHAR(50), streetName VARCHAR(100), city VARCHAR(50), postalCode VARCHAR(10), email VARCHAR(100), joinDate DATE, PRIMARY KEY (id))
+2024-10-20 19:13:59,898 main INFO  dao.CustomerDao (CustomerDao.java:82) - Table A01183994_Customers created successfully.
+2024-10-20 19:13:59,905 main DEBUG dao.Dao (Dao.java:40) - INSERT INTO A01183994_Customers VALUES ('1', '6044335004', 'Fred', 'Fish', '5707 Sidley St', 'Burnaby', 'V5J5E6', 'fredfish@imperial.net', '2008-03-22')
+2024-10-20 19:13:59,985 main DEBUG dao.Dao (Dao.java:40) - INSERT INTO A01183994_Customers VALUES ('2', '6048760182', 'Laurie', 'Nash', '2816 Commercial Dr', 'Vancouver', 'V5N4C6', 'laurieeenash@modern.com', '2014-08-28')
+2024-10-20 19:14:00,054 main DEBUG dao.Dao (Dao.java:40) - INSERT INTO A01183994_Customers VALUES ('3', '6045884988', 'Conrad', 'Washington', '13479 King George Blvd', 'Surrey', 'V3T2T8', 'cwash@daytona.net', '2011-07-12')
+2024-10-20 19:14:00,123 main DEBUG dao.Dao (Dao.java:40) - INSERT INTO A01183994_Customers VALUES ('4', '6042762552', 'Jeanette', 'Price', '21000 Westminster Hwy', 'Richmond', 'V6V2S9', 'priceizrite@pacific.com', '2015-10-03')
+2024-10-20 19:14:00,198 main DEBUG dao.Dao (Dao.java:40) - INSERT INTO A01183994_Customers VALUES ('5', '6042931022', 'Mark', 'Chan', '3766 E 1st Ave', 'Burnaby', 'V5C3V9', 'mchan@hcenter.com', '2010-04-01')
+2024-10-20 19:14:00,211 main INFO  a01183994.Lab4 (Lab4.java:148) - Customers added successfully from file.
+2024-10-20 19:14:00,211 main INFO  dao.CustomerDao (CustomerDao.java:173) - Cleaning up CustomerDao resources.
+2024-10-20 19:14:00,295 main DEBUG dao.CustomerDao (CustomerDao.java:177) - DROP TABLE IF EXISTS A01183994_Customers
+2024-10-20 19:14:00,305 main INFO  dao.CustomerDao (CustomerDao.java:179) - Table A01183994_Customers dropped successfully.
+2024-10-20 19:14:00,305 main INFO  a01183994.Lab4 (Lab4.java:108) - Lab4 execution completed.

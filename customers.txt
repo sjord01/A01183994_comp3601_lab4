@@ -1,0 +1,6 @@
+ID|FIRST_NAME|LAST_NAME|STREET|CITY|POSTAL_CODE|PHONE|EMAIL|JOIN_DATE
+1|Fred|Fish|5707 Sidley St|Burnaby|V5J5E6|6044335004|fredfish@imperial.net|20080322
+2|Laurie|Nash|2816 Commercial Dr|Vancouver|V5N4C6|6048760182|laurieeenash@modern.com|20140828
+3|Conrad|Washington|13479 King George Blvd|Surrey|V3T2T8|6045884988|cwash@daytona.net|20110712
+4|Jeanette|Price|21000 Westminster Hwy|Richmond|V6V2S9|6042762552|priceizrite@pacific.com|20151003
+5|Mark|Chan|3766 E 1st Ave|Burnaby|V5C3V9|6042931022|mchan@hcenter.com|20100401
