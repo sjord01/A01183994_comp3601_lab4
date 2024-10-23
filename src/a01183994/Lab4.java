@@ -26,6 +26,8 @@ public class Lab4 {
 
 	private static final String LOG4J_CONFIG_FILENAME = "log4j2.xml";
 	private static final String DB_PROPERTIES_FILENAME = "db.properties";
+	private static final String DATA_TO_READ_TXT_FILE = "customers.txt";
+	private static final String TXT_FILE_DELIMETER = "\\|";
 
 	static {
 		configureLogging();
@@ -87,9 +89,9 @@ public class Lab4 {
             }
             createTable();
             insertCustomers();
-            //printAllCustomers();
+            printAllCustomers();
             
-            //new CustomerDaoTester(database).test();
+            new CustomerDaoTester(database).test();
 
         } finally {
             if (customerDao != null) {
@@ -127,12 +129,12 @@ public class Lab4 {
 	}
 
 	private void insertCustomers() throws SQLException, IOException {
-	    String fileName = "customers.txt";
+	    String fileName = DATA_TO_READ_TXT_FILE;
 	    try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
 	        String line;
 	        reader.readLine(); // Skip the header line
 	        while ((line = reader.readLine()) != null) {
-	            String[] data = line.split("\\|");
+	            String[] data = line.split(TXT_FILE_DELIMETER);
 	            Customer customer = new Customer.Builder(data[0], data[6])
 	                .setFirstName(data[1])
 	                .setLastName(data[2])

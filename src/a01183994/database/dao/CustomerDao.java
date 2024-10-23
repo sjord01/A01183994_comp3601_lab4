@@ -24,15 +24,15 @@ public class CustomerDao extends Dao {
     }
 
     public enum Fields {
-        ID("id", "VARCHAR", 20, 1),
-        PHONE("phone", "VARCHAR", 20, 2),
-        FIRST_NAME("firstName", "VARCHAR", 50, 3),
-        LAST_NAME("lastName", "VARCHAR", 50, 4),
-        STREET_NAME("streetName", "VARCHAR", 100, 5),
-        CITY("city", "VARCHAR", 50, 6),
-        POSTAL_CODE("postalCode", "VARCHAR", 10, 7),
-        EMAIL("email", "VARCHAR", 100, 8),
-        JOIN_DATE("joinDate", "DATE", -1, 9);
+    	ID("id", "VARCHAR", 20, 1),
+        FIRST_NAME("firstName", "VARCHAR", 50, 2),
+        LAST_NAME("lastName", "VARCHAR", 50, 3),
+        STREET_NAME("street", "VARCHAR", 100, 4),
+        CITY("city", "VARCHAR", 50, 5),
+        POSTAL_CODE("postalCode", "VARCHAR", 10, 6),
+        PHONE("phone", "VARCHAR", 20, 7),
+        EMAIL("emailAddress", "VARCHAR", 100, 8),
+        JOINED_DATE("joinedDate", "DATE", -1, 9);
 
         private final String name;
         private final String type;
@@ -68,14 +68,14 @@ public class CustomerDao extends Dao {
                 "PRIMARY KEY (%s))",
                 TABLE_NAME,
                 Fields.ID.getName(), Fields.ID.getType(), Fields.ID.getLength(),
-                Fields.PHONE.getName(), Fields.PHONE.getType(), Fields.PHONE.getLength(),
                 Fields.FIRST_NAME.getName(), Fields.FIRST_NAME.getType(), Fields.FIRST_NAME.getLength(),
                 Fields.LAST_NAME.getName(), Fields.LAST_NAME.getType(), Fields.LAST_NAME.getLength(),
                 Fields.STREET_NAME.getName(), Fields.STREET_NAME.getType(), Fields.STREET_NAME.getLength(),
                 Fields.CITY.getName(), Fields.CITY.getType(), Fields.CITY.getLength(),
                 Fields.POSTAL_CODE.getName(), Fields.POSTAL_CODE.getType(), Fields.POSTAL_CODE.getLength(),
+                Fields.PHONE.getName(), Fields.PHONE.getType(), Fields.PHONE.getLength(),
                 Fields.EMAIL.getName(), Fields.EMAIL.getType(), Fields.EMAIL.getLength(),
-                Fields.JOIN_DATE.getName(), Fields.JOIN_DATE.getType(),
+                Fields.JOINED_DATE.getName(), Fields.JOINED_DATE.getType(),
                 Fields.ID.getName()
             );
             super.create(sql);
@@ -98,12 +98,12 @@ public class CustomerDao extends Dao {
             "INSERT INTO %s VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s')",
             TABLE_NAME,
             customer.getId(),
-            customer.getPhone(),
             customer.getFirstName(),
             customer.getLastName(),
             customer.getStreetName(),
             customer.getCity(),
             customer.getPostalCode(),
+            customer.getPhone(),
             customer.getEmail(),
             customer.getJoinDate().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"))
         );
@@ -127,13 +127,12 @@ public class CustomerDao extends Dao {
                 .setCity(resultSet.getString(Fields.CITY.getName()))
                 .setPostalCode(resultSet.getString(Fields.POSTAL_CODE.getName()))
                 .setEmail(resultSet.getString(Fields.EMAIL.getName()))
-                .setJoinDate(resultSet.getDate(Fields.JOIN_DATE.getName()).toLocalDate().toString())
+                .setJoinDate(resultSet.getDate(Fields.JOINED_DATE.getName()).toLocalDate().minusMonths(1).toString())
                 .build();
             }
         }
         return customer;
     }
-
     public void update(Customer customer) throws SQLException {
         String sql = String.format(
             "UPDATE %s SET %s='%s', %s='%s', %s='%s', %s='%s', %s='%s', %s='%s', %s='%s', %s='%s' WHERE %s='%s'",
@@ -145,7 +144,7 @@ public class CustomerDao extends Dao {
             Fields.CITY.getName(), customer.getCity(),
             Fields.POSTAL_CODE.getName(), customer.getPostalCode(),
             Fields.EMAIL.getName(), customer.getEmail(),
-            Fields.JOIN_DATE.getName(), customer.getJoinDate().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")),
+            Fields.JOINED_DATE.getName(), customer.getJoinDate().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")),
             Fields.ID.getName(), customer.getId()
         );
         executeUpdate(sql);

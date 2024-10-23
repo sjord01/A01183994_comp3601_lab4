@@ -23,9 +23,12 @@ public class CustomerDaoTester {
             System.out.println(id);
             Customer customer = customerDao.getCustomer(id);
             if (customer != null) {
-                System.out.println("SELECT * FROM " + CustomerDao.TABLE_NAME + " WHERE id = " + id);
-                System.out.println(customer);
-                System.out.println();
+                System.out.println("SELECT * FROM S456_Customers WHERE id = " + id);
+                System.out.printf("Customer [id=%s, firstName=%s, lastName=%s, street=%s, city=%s, postalCode=%s,\n" +
+                                  "phone=%s, emailAddress=%s, joinedDate=%s]\n\n",
+                    customer.getId(), customer.getFirstName(), customer.getLastName(),
+                    customer.getStreetName(), customer.getCity(), customer.getPostalCode(),
+                    customer.getPhone(), customer.getEmail(), customer.getJoinDate());
             }
         }
     }
